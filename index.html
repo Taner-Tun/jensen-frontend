@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="styelsheet" href="main.css">
+    <link rel="stylesheet" href="main.css">
     <title>Jensen-Frontend</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     
@@ -16,6 +17,27 @@
         <input id="password" type="password" name="password" placeholder="password" required><br><br>
         <input type="submit" value="login">
     </form>
+    <form method="POST">
+        <div class="g-recaptcha" data-sitekey="6LeHkCMeAAAAAKodqw2NANE_WtoQNKrdrATuPKxN"   data-callback="recaptcha_callback">    
+        </div>
+        <br/>
+        <input type="submit" id="submitBtn" value="submit" disabled>
+    </form>
+    
+    <div id="consent-popup" class="hidden">
+     <p>By clicking submit button you agree our <a href="#"> terms and conditions.</a>
+        Please<a id ="accept" href="#"> Accept </a>These before click submit button.
+    </p>
+
+    </div>
+
+  <script>
+      function recaptcha_callback() {
+          var submitBtn = document.querySelector('#submitBtn');
+          submitBtn.removeAttribute('disabled');
+          submitBtn.style.cursor='pointer';
+      }
+  </script>
 
     <script src="app.js"></script>
 </body>
