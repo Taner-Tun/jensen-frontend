@@ -11,26 +11,29 @@ const cookieStorage = {
     },
 };
 
-const storage = cookieStorage;
-const consentForm = 'user_consent';
+const storageTip = cookieStorage;
+const consentFormName = 'user_consent';
 
-const popup = () => !storage.getItem(consentForm);
-const saveToStorage = () => storage.setItem(consentForm, true);
+const showPopup = () => !storageTip.getItem(consentFormName);
+const saveToStorage = () => storageTip.setItem(consentFormName, true);
 
 window.onload = () => {  //set up some behaviour
     const consentPopup = document.getElementById('consent-popup');
     const acceptBtn = document.getElementById('accept');
 
     const acceptFn = event => {   //accept button clicked
-        saveToStorage(storage);
+        saveToStorage(storageTip);
         consentPopup.classList.add('hidden');
     };
 
     acceptBtn.addEventListener('click', acceptFn);
 
 
-   if(popup(storage)) {
-     consentPopup.classList.remove('hidden');
+   if(showPopup(storageTip)) {
+     setTimeout(() => {
+        consentPopup.classList.remove('hidden');
+     },2000);
+     
    }
 };
 
