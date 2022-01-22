@@ -1,4 +1,4 @@
-const cookieStorages = {
+const cookieStorage = {
     getItem: (key) => {
         const cookies = document.cookie
         .split(';')
@@ -11,17 +11,17 @@ const cookieStorages = {
     },
 };
 
-const storage = cookieStorages;
+const storage = cookieStorage;
 const consentForm = 'user_consent';
 
 const popup = () => !storage.getItem(consentForm);
 const saveToStorage = () => storage.setItem(consentForm, true);
 
-window.onload = () => {
-    const consentPopup = document.getElementById('consentPopup');
+window.onload = () => {  //set up some behaviour
+    const consentPopup = document.getElementById('consent-popup');
     const acceptBtn = document.getElementById('accept');
 
-    const acceptFn = event => {
+    const acceptFn = event => {   //accept button clicked
         saveToStorage(storage);
         consentPopup.classList.add('hidden');
     };
