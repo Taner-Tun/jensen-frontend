@@ -1,0 +1,19 @@
+#submitBtn {
+  cursor: not-allowed;
+}
+
+#consent-popup {
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background-color: #dd4343;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+#consent-popup.hidden {
+  opacity: 0;
+}/*# sourceMappingURL=main.css.map */
