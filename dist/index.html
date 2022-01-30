@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.b1276d39.css">
+    <title>Jensen-Frontend</title>
+    <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+</head>
+<body>
+    
+    <form method="post">
+        Username:<br>
+        <input id="user" type="text" name="user" placeholder="user" required=""><br><br>
+        Password:<br>
+        <input id="password" type="password" name="password" placeholder="password" required=""><br><br>
+        <input type="submit" value="login">
+    </form>
+    <br>
+    <form method="POST">
+        <div class="g-recaptcha" data-sitekey="6LeHkCMeAAAAAKodqw2NANE_WtoQNKrdrATuPKxN" data-callback="recaptcha_callback">    
+        </div>
+        <br>
+        <input type="submit" id="submitBtn" value="submit" disabled="">
+    </form>
+    
+    <div id="consent-popup" class="hidden">
+     <p>By using this site you agree to our <a href="#"> terms and conditions.</a>
+        Please<a id="accept" href="#"> Accept </a>these before using our site.
+    </p>
+
+    </div>
+
+  <script>function recaptcha_callback() {
+    var submitBtn = document.querySelector('#submitBtn');
+    submitBtn.removeAttribute('disabled');
+    submitBtn.style.cursor = 'pointer';
+}
+
+</script>
+
+    <script src="/index.7c0ccee6.js"></script>
+</body>
+</html>
