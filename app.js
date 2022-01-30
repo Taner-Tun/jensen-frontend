@@ -35,13 +35,6 @@ window.onload = () => {  //set up some behaviour
     
   }
 };
-    
-
-    
-
-
-
-
 document.addEventListener("submit" , (event)=>{
     console.log("Validating")
     let user = document.getElementById("user").value;
