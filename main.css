@@ -1,3 +1,8 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fad3a1;
+}
+
 #submitBtn {
   cursor: not-allowed;
 }
@@ -11,9 +16,15 @@
   padding: 2rem;
   background-color: #dd4343;
   opacity: 1;
-  transition: opacity 0.8s ease;
+  -webkit-transition: opacity .8s ease;
+  transition: opacity .8s ease;
 }
 
 #consent-popup.hidden {
   opacity: 0;
-}/*# sourceMappingURL=main.css.map */
+}
+
+input {
+  background-color: #c9e7e7;
+}
+/*# sourceMappingURL=main.css.map */

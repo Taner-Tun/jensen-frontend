@@ -1,3 +1,7 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(250, 211, 161);    
+}
 #submitBtn{
     cursor: not-allowed;
 }
@@ -15,3 +19,8 @@
 #consent-popup.hidden{
     opacity: 0;
 }
+
+input {
+   background-color: rgb(201, 231, 231);
+}
+
