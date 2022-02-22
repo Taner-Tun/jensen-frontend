@@ -12,7 +12,7 @@
     "normalize.css": "^8.0.1",
     "openssl": "^2.0.0",
     "parcel": "^2.2.1",
-    "sass": "^1.49.0"
+    "sass": "^1.49.4"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.2.1"
